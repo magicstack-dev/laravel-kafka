@@ -1,5 +1,5 @@
 {
-    "name": "mateusjunges/laravel-kafka",
+    "name": "magicstack-dev/laravel-kafka",
     "description": "A kafka driver for laravel",
     "type": "library",
     "require": {
@@ -32,8 +32,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "mateusjunges",
-            "email": "mateus@junges.dev",
+            "name": "Kuldip Satpute",
+            "email": "kuldip@magicstack.dev",
             "role": "Senior Software Engineer"
         }
     ],
