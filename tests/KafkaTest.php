@@ -221,12 +221,12 @@ final class KafkaTest extends LaravelKafkaTestCase
     {
         $producer = Kafka::publish()
             ->withConfigOptions($expectedOptions = [
-                'bootstrap.servers'    => '[REMOTE_ADDRESS]',
+                'bootstrap.servers' => '[REMOTE_ADDRESS]',
                 'metadata.broker.list' => '[REMOTE_ADDRESS]',
-                'security.protocol'    => 'SASL_SSL',
-                'sasl.mechanisms'      => 'PLAIN',
-                'sasl.username'        => '[API_KEY]',
-                'sasl.password'        => '[API_KEY]',
+                'security.protocol' => 'SASL_SSL',
+                'sasl.mechanisms' => 'PLAIN',
+                'sasl.username' => '[API_KEY]',
+                'sasl.password' => '[API_KEY]',
             ]);
 
         $options = $this->getPropertyWithReflection('options', $producer);

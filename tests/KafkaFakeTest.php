@@ -316,10 +316,10 @@ final class KafkaFakeTest extends LaravelKafkaTestCase
 
         $posts = [
             1 => [
-                'id'           => 1,
+                'id' => 1,
                 'published_at' => null,
-                'title'        => 'Hey Jude',
-                'content'      => "Don't make it bad, take a sad song and make it better",
+                'title' => 'Hey Jude',
+                'content' => "Don't make it bad, take a sad song and make it better",
             ],
         ];
 

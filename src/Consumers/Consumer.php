@@ -273,7 +273,7 @@ class Consumer implements MessageConsumer
         match (true) {
             $batchConfig->getBatchRepository()->getBatchSize() >= $batchConfig->getBatchSizeLimit(),
             $batchConfig->getTimer()->isTimedOut() && $batchConfig->getBatchRepository()->getBatchSize() > 0 => $executeBatchCallback(),
-            default                                                                                          => null
+            default => null
         };
 
         if ($batchConfig->getTimer()->isTimedOut()) {
@@ -463,10 +463,10 @@ class Consumer implements MessageConsumer
         return app(ConsumerMessage::class, [
             'topicName' => $message->topic_name,
             'partition' => $message->partition,
-            'headers'   => $message->headers ?? [],
-            'body'      => $message->payload,
-            'key'       => $message->key,
-            'offset'    => $message->offset,
+            'headers' => $message->headers ?? [],
+            'body' => $message->payload,
+            'key' => $message->key,
+            'offset' => $message->offset,
             'timestamp' => $message->timestamp,
         ]);
     }

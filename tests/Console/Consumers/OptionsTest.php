@@ -17,13 +17,13 @@ class OptionsTest extends LaravelKafkaTestCase
         parent::setUp();
 
         $this->config = [
-            'brokers'          => config('kafka.brokers'),
-            'groupId'          => config('kafka.group_id'),
+            'brokers' => config('kafka.brokers'),
+            'groupId' => config('kafka.group_id'),
             'securityProtocol' => config('kafka.securityProtocol'),
-            'sasl'             => [
+            'sasl' => [
                 'mechanisms' => config('kafka.sasl.mechanisms'),
-                'username'   => config('kafka.sasl.username'),
-                'password'   => config('kafka.sasl.password'),
+                'username' => config('kafka.sasl.username'),
+                'password' => config('kafka.sasl.password'),
             ],
         ];
     }
@@ -31,12 +31,12 @@ class OptionsTest extends LaravelKafkaTestCase
     public function testItInstantiateTheClassWithCorrectOptions(): void
     {
         $commandLineOptions = [
-            'topics'           => 'test-topic,test-topic-1',
-            'consumer'         => FakeHandler::class,
-            'groupId'          => 'test',
-            'commit'           => 1,
-            'dlq'              => 'test-dlq',
-            'maxMessages'      => 2,
+            'topics' => 'test-topic,test-topic-1',
+            'consumer' => FakeHandler::class,
+            'groupId' => 'test',
+            'commit' => 1,
+            'dlq' => 'test-dlq',
+            'maxMessages' => 2,
             'securityProtocol' => 'plaintext',
         ];
 
@@ -56,7 +56,7 @@ class OptionsTest extends LaravelKafkaTestCase
     public function testItInstantiatesUsingOnlyRequiredOptions(): void
     {
         $options = [
-            'topics'   => 'test-topic,test-topic-1',
+            'topics' => 'test-topic,test-topic-1',
             'consumer' => FakeHandler::class,
         ];
 

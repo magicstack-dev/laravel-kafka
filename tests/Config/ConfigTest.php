@@ -30,10 +30,10 @@ final class ConfigTest extends LaravelKafkaTestCase
         );
 
         $expectedOptions = [
-            'auto.offset.reset'    => 'latest',
-            'enable.auto.commit'   => 'true',
-            'group.id'             => 'group',
-            'bootstrap.servers'    => 'broker',
+            'auto.offset.reset' => 'latest',
+            'enable.auto.commit' => 'true',
+            'group.id' => 'group',
+            'bootstrap.servers' => 'broker',
             'metadata.broker.list' => 'broker',
         ];
 
@@ -61,10 +61,10 @@ final class ConfigTest extends LaravelKafkaTestCase
         );
 
         $expectedOptions = [
-            'auto.offset.reset'    => 'smallest',
-            'enable.auto.commit'   => 'true',
-            'group.id'             => 'group',
-            'bootstrap.servers'    => 'broker',
+            'auto.offset.reset' => 'smallest',
+            'enable.auto.commit' => 'true',
+            'group.id' => 'group',
+            'bootstrap.servers' => 'broker',
             'metadata.broker.list' => 'broker',
         ];
 
@@ -92,15 +92,15 @@ final class ConfigTest extends LaravelKafkaTestCase
         );
 
         $expectedOptions = [
-            'auto.offset.reset'    => 'smallest',
-            'enable.auto.commit'   => 'true',
-            'group.id'             => 'group',
-            'bootstrap.servers'    => 'broker',
+            'auto.offset.reset' => 'smallest',
+            'enable.auto.commit' => 'true',
+            'group.id' => 'group',
+            'bootstrap.servers' => 'broker',
             'metadata.broker.list' => 'broker',
-            'security.protocol'    => 'SASL_SSL',
-            'sasl.username'        => 'foo',
-            'sasl.password'        => 'bar',
-            'sasl.mechanisms'      => 'SCRAM-SHA-512',
+            'security.protocol' => 'SASL_SSL',
+            'sasl.username' => 'foo',
+            'sasl.password' => 'bar',
+            'sasl.mechanisms' => 'SCRAM-SHA-512',
         ];
 
         $this->assertEquals(
@@ -129,13 +129,13 @@ final class ConfigTest extends LaravelKafkaTestCase
         );
 
         $expectedOptions = [
-            'compression.codec'    => 'snappy',
-            'bootstrap.servers'    => 'broker',
-            'sasl.username'        => 'user',
-            'sasl.password'        => 'pass',
-            'sasl.mechanisms'      => 'mec',
+            'compression.codec' => 'snappy',
+            'bootstrap.servers' => 'broker',
+            'sasl.username' => 'user',
+            'sasl.password' => 'pass',
+            'sasl.mechanisms' => 'mec',
             'metadata.broker.list' => 'broker',
-            'security.protocol'    => 'SASL_PLAINTEXT',
+            'security.protocol' => 'SASL_PLAINTEXT',
         ];
 
         $this->assertEquals(
@@ -147,12 +147,12 @@ final class ConfigTest extends LaravelKafkaTestCase
     public function testItAcceptsCustomOptionsForProducersConfig(): void
     {
         $customOptions = [
-            'bootstrap.servers'    => '[REMOTE_ADDRESS]',
+            'bootstrap.servers' => '[REMOTE_ADDRESS]',
             'metadata.broker.list' => '[REMOTE_ADDRESS]',
-            'security.protocol'    => 'SASL_SSL',
-            'sasl.mechanisms'      => 'PLAIN',
-            'sasl.username'        => '[API_KEY]',
-            'sasl.password'        => '[API_KEY]',
+            'security.protocol' => 'SASL_SSL',
+            'sasl.mechanisms' => 'PLAIN',
+            'sasl.username' => '[API_KEY]',
+            'sasl.password' => '[API_KEY]',
         ];
 
         $config = new Config(
@@ -167,13 +167,13 @@ final class ConfigTest extends LaravelKafkaTestCase
         );
 
         $expectedOptions = [
-            'compression.codec'    => 'snappy',
-            'bootstrap.servers'    => '[REMOTE_ADDRESS]',
+            'compression.codec' => 'snappy',
+            'bootstrap.servers' => '[REMOTE_ADDRESS]',
             'metadata.broker.list' => '[REMOTE_ADDRESS]',
-            'security.protocol'    => 'SASL_SSL',
-            'sasl.mechanisms'      => 'PLAIN',
-            'sasl.username'        => '[API_KEY]',
-            'sasl.password'        => '[API_KEY]',
+            'security.protocol' => 'SASL_SSL',
+            'sasl.mechanisms' => 'PLAIN',
+            'sasl.username' => '[API_KEY]',
+            'sasl.password' => '[API_KEY]',
         ];
 
         $this->assertEquals(
@@ -201,13 +201,13 @@ final class ConfigTest extends LaravelKafkaTestCase
         );
 
         $expectedOptions = [
-            'compression.codec'    => 'snappy',
-            'bootstrap.servers'    => 'broker',
+            'compression.codec' => 'snappy',
+            'bootstrap.servers' => 'broker',
             'metadata.broker.list' => 'broker',
-            'security.protocol'    => 'ssl_plaintext',
-            'sasl.mechanisms'      => 'mechanisms',
-            'sasl.username'        => 'username',
-            'sasl.password'        => 'password',
+            'security.protocol' => 'ssl_plaintext',
+            'sasl.mechanisms' => 'mechanisms',
+            'sasl.username' => 'username',
+            'sasl.password' => 'password',
         ];
 
         $this->assertEquals(

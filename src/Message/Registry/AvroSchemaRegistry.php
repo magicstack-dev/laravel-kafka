@@ -15,7 +15,7 @@ class AvroSchemaRegistry implements AvroSchemaRegistryContract
     /** @var array<string, AvroSchemaRegistry[]> */
     private array $schemaMapping = [
         self::BODY_IDX => [],
-        self::KEY_IDX  => [],
+        self::KEY_IDX => [],
     ];
 
     /** AvroSchemaRegistry constructor. */

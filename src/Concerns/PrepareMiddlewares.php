@@ -14,9 +14,9 @@ trait PrepareMiddlewares
     {
         $middleware = match (true) {
             is_string($middleware) && is_subclass_of($middleware, Middleware::class) => new $middleware(),
-            $middleware instanceof Middleware                                        => $middleware,
-            is_callable($middleware)                                                 => $middleware,
-            default                                                                  => throw new \LogicException('Invalid middleware.')
+            $middleware instanceof Middleware => $middleware,
+            is_callable($middleware) => $middleware,
+            default => throw new \LogicException('Invalid middleware.')
         };
 
         return static fn (callable $handler) => static fn ($message) => $middleware($message, $handler);

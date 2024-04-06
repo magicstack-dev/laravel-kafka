@@ -10,7 +10,7 @@ final class CouldNotPublishMessageBatch extends LaravelKafkaException
     {
         $message = match (true) {
             $topic === '' => "The provided topic name [''] is invalid for the message batch. Try again with a valid topic name.",
-            default       => 'The provided topic name is invalid for the message batch. Try again with a valid topic name.'
+            default => 'The provided topic name is invalid for the message batch. Try again with a valid topic name.'
         };
 
         return new self($message);

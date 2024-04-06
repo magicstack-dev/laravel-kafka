@@ -64,7 +64,7 @@ class Message extends AbstractMessage implements Arrayable, ProducerMessage
     {
         return [
             'payload' => $this->body,
-            'key'     => $this->key,
+            'key' => $this->key,
             'headers' => $this->headers,
         ];
     }

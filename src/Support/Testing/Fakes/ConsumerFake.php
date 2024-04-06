@@ -176,10 +176,10 @@ class ConsumerFake implements MessageConsumer
         return app(ConsumerMessage::class, [
             'topicName' => $message->topic_name,
             'partition' => $message->partition,
-            'headers'   => $message->headers ?? [],
-            'body'      => unserialize($message->payload),
-            'key'       => $message->key,
-            'offset'    => $message->offset,
+            'headers' => $message->headers ?? [],
+            'body' => unserialize($message->payload),
+            'key' => $message->key,
+            'offset' => $message->offset,
             'timestamp' => $message->timestamp,
         ]);
     }

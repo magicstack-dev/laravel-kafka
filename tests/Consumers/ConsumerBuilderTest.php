@@ -279,7 +279,7 @@ final class ConsumerBuilderTest extends LaravelKafkaTestCase
     {
         $consumer = Builder::create('broker')
             ->withOptions([
-                'auto.offset.reset'  => 'latest',
+                'auto.offset.reset' => 'latest',
                 'enable.auto.commit' => 'false',
             ]);
 
@@ -307,8 +307,7 @@ final class ConsumerBuilderTest extends LaravelKafkaTestCase
 
     public function testItCanBuildWithCustomCommitter(): void
     {
-        $adhocCommitterFactory = new class implements CommitterFactory
-        {
+        $adhocCommitterFactory = new class implements CommitterFactory {
             public function make(KafkaConsumer $kafkaConsumer, Config $config): Committer
             {
                 return new VoidCommitter();

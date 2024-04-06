@@ -130,7 +130,7 @@ class Builder implements MessageProducer
         if ($enabled) {
             $this->withConfigOptions([
                 'log_level' => LOG_DEBUG,
-                'debug'     => 'all',
+                'debug' => 'all',
             ]);
         } else {
             unset($this->options['log_level']);
@@ -211,7 +211,7 @@ class Builder implements MessageProducer
         );
 
         return app(Producer::class, [
-            'config'     => $conf,
+            'config' => $conf,
             'serializer' => $this->serializer,
         ]);
     }

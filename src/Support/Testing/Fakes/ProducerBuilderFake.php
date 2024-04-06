@@ -124,7 +124,7 @@ class ProducerBuilderFake implements MessageProducer
         if ($enabled) {
             $this->withConfigOptions([
                 'log_level' => LOG_DEBUG,
-                'debug'     => 'all',
+                'debug' => 'all',
             ]);
         } else {
             unset($this->options['log_level']);

@@ -145,10 +145,10 @@ abstract class LaravelKafkaTestCase extends Orchestra
         return app(ConsumerMessage::class, [
             'topicName' => $message->topic_name,
             'partition' => $message->partition,
-            'headers'   => $message->headers,
-            'body'      => $message->payload,
-            'key'       => $message->key,
-            'offset'    => $message->offset,
+            'headers' => $message->headers,
+            'body' => $message->payload,
+            'key' => $message->key,
+            'offset' => $message->offset,
             'timestamp' => $message->timestamp,
         ]);
     }

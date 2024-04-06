@@ -98,7 +98,7 @@ final class MessageTest extends LaravelKafkaTestCase
 
         $expectedArray = [
             'payload' => $array,
-            'key'     => $uuid,
+            'key' => $uuid,
             'headers' => $headers,
         ];
 

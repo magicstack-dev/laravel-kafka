@@ -35,13 +35,13 @@ class ConsumerCommand extends Command
         parent::__construct();
 
         $this->config = [
-            'brokers'          => config('kafka.brokers'),
-            'groupId'          => config('kafka.consumer_group_id'),
+            'brokers' => config('kafka.brokers'),
+            'groupId' => config('kafka.consumer_group_id'),
             'securityProtocol' => config('kafka.securityProtocol'),
-            'sasl'             => [
+            'sasl' => [
                 'mechanisms' => config('kafka.sasl.mechanisms'),
-                'username'   => config('kafka.sasl.username'),
-                'password'   => config('kafka.sasl.password'),
+                'username' => config('kafka.sasl.username'),
+                'password' => config('kafka.sasl.password'),
             ],
         ];
     }
@@ -82,7 +82,7 @@ class ConsumerCommand extends Command
 
         /** @var Consumer $consumer */
         $consumer = app(Consumer::class, [
-            'config'       => $config,
+            'config' => $config,
             'deserializer' => app($deserializer ?? MessageDeserializer::class),
         ]);
 

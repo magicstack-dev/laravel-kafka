@@ -142,10 +142,10 @@ class Config
     {
         $options = [
             'metadata.broker.list' => $this->broker,
-            'auto.offset.reset'    => config('kafka.offset_reset', 'latest'),
-            'enable.auto.commit'   => config('kafka.auto_commit', true) === true ? 'true' : 'false',
-            'group.id'             => $this->groupId,
-            'bootstrap.servers'    => $this->broker,
+            'auto.offset.reset' => config('kafka.offset_reset', 'latest'),
+            'enable.auto.commit' => config('kafka.auto_commit', true) === true ? 'true' : 'false',
+            'group.id' => $this->groupId,
+            'bootstrap.servers' => $this->broker,
         ];
 
         if (isset($this->autoCommit)) {
@@ -160,8 +160,8 @@ class Config
     public function getProducerOptions(): array
     {
         $config = [
-            'compression.codec'    => config('kafka.compression', 'snappy'),
-            'bootstrap.servers'    => $this->broker,
+            'compression.codec' => config('kafka.compression', 'snappy'),
+            'bootstrap.servers' => $this->broker,
             'metadata.broker.list' => $this->broker,
         ];
 
@@ -190,9 +190,9 @@ class Config
     {
         if ($this->usingSasl() && $this->sasl !== null) {
             return [
-                'sasl.username'     => $this->sasl->getUsername(),
-                'sasl.password'     => $this->sasl->getPassword(),
-                'sasl.mechanisms'   => $this->sasl->getMechanisms(),
+                'sasl.username' => $this->sasl->getUsername(),
+                'sasl.password' => $this->sasl->getPassword(),
+                'sasl.mechanisms' => $this->sasl->getMechanisms(),
                 'security.protocol' => $this->sasl->getSecurityProtocol(),
             ];
         }
